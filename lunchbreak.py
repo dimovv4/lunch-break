@@ -7,5 +7,7 @@ rest_time = break_time / 4
 time_left = break_time - lunch_time - rest_time
 difference = abs(episode_time - time_left)
 difference = ceil(difference)
+if time_left >= episode_time:
+    print(f"You have enough time to watch {movie_name} with {difference} minutes free time.")
 elif time_left <= episode_time:
     print(f"You don't have enough time to watch {movie_name}, you need {difference} more minutes.")
